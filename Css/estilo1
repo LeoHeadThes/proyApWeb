@@ -1,0 +1,31 @@
+
+
+      .divrelative{
+        position: relative;
+        width: 400px;
+        height: 200px;
+       
+  }
+
+      .divabsolute{
+        position: absolute;
+        top: 5px;
+        margin-left: 650px;
+        right: 90;
+        left: 90;
+        width: 400px;
+        height: 400px;
+       
+      }
+      .Frame{
+        position: absolute;
+        top: 500px;
+        margin-left: 50px;
+        right: 90;
+        left: 90;
+        
+      }
+   .pie{
+position: absolute;
+top: 1000px;
+   }
