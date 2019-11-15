@@ -1,0 +1,69 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:black;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 19px 100px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color:black;
+  }
+  nav{
+    height: 300px; width: 1350px; float: center;
+    background-color:black;
+  }
+  .btn{
+    width: 200px; height: 200px; float: left;
+   background-color: white;
+    }
+    .btn2{
+      width: 200px; height: 200px; float: left;
+      background-color:black;
+      }
+      .btn3{
+        width: 150px;height: 150px; float: left;
+        background-color: black;
+      }
+      .btn4{
+        width: 50px;height: 50px; float: left;
+        background-color: black;
+      }
+
+      .divrelative{
+        position: relative;
+        width: 400px;
+        height: 200px;
+       
+  }
+
+      .divabsolute{
+        position: absolute;
+        top: 5px;
+        margin-left: 650px;
+        right: 90;
+        left: 90;
+        width: 400px;
+        height: 400px;
+       
+      }
+      .Frame{
+        position: absolute;
+        top: 500px;
+        margin-left: 50px;
+        right: 90;
+        left: 90;
+        
+      }
+    
