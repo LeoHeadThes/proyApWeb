@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect("localhost","root","", "capacita_enline");
+$conexion = mysqli_connect("localhost","root","root", "capacitadora2");
 
 
 

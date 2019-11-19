@@ -1,12 +1,11 @@
 <?php
-session_start();
-include 'cn.php';
+  session_start();
+  include 'cn.php';
 
-
-if(isset($_SESSION['username'])){
-		echo '<script> window.location="index2Session.php";</script>';
-}
-  ?>
+  if(isset($_SESSION['username'])){
+      echo '<script> window.location="index2Session.php";</script>';
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -20,31 +19,25 @@ if(isset($_SESSION['username'])){
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-
-
 </head>
+
 <body>
-<Div class="container-fluid">
-    <div class="row">
-            <div class="col-md-12">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                            <a class="navbar-brand" href="#">
-                                    <img src="images/arbol.png" width="30" height="30" alt="logo">
-                                    Capacitadora online
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                              <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                  <a class="nav-link" href="index2.html">Inicio <span class="sr-only">(current)</span></a>
-                                </li>
-
-                                <li class="nav-item dropdown">
-                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                   Categorias
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"><img src="images/arbol.png" width="30" height="30" alt="logo"> Capacitadora online </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index2.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorias
                                   </a>
                                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="#">Idiomas</a>
@@ -76,7 +69,7 @@ if(isset($_SESSION['username'])){
                               </form>
 
                             </div>
-                          </nav>
+        </nav>
             </div>
 
     </div>
@@ -238,10 +231,8 @@ if(isset($_SESSION['username'])){
                             </div>
                           </div>
                         </div>
-
-
     </div>
-</Div>
+</div>
 
 </body>
 <footer>
