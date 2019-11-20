@@ -1,6 +1,5 @@
 <?php
-function sanear_string($string)
-{
+function sanear_string($string){
  
     $string = trim($string);
  
@@ -40,7 +39,6 @@ function sanear_string($string)
         $string
     );
  
-
     return $string;
 }
 
@@ -49,7 +47,7 @@ include('./cn.php');
 $img = $_FILES['imagen'];
 $nom = $_FILES['imagen']['name'];
 $temp = $img['tmp_name'];
-$ruta = '../';
+$ruta = '../images/';
 
 echo $img;
 
@@ -67,7 +65,7 @@ if(file_exists($ruta.$nombrenuevo)){
         $query="INSERT INTO `cursos`(`id`, `titulo`, `descripcion`, `precio`, `imagen`) VALUES ('',$titulo,$desc,$precio,$nombrenuevo)";
         $result = $conexion->query($query);
         move_uploaded_file($temp, $ruta.$nombrenuevo);
-        echo 'Documento subido con exito';
+        echo 'Curso subido con exito';
     } catch (Exception $e){
         echo  json_encode($e->getMessage());
         }
