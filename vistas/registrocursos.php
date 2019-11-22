@@ -46,25 +46,25 @@ include('./cn.php');
 
 $img = $_FILES['imagen'];
 $nom = $_FILES['imagen']['name'];
-$temp = $img['tmp_name'];
+$temp = $_FILES['imagen']['tmp_name'];
 $ruta = '../images/';
 
-echo $img;
 
 $titulo = $_POST['titulo'];
 $desc = $_POST['descripcion'];
 $precio = $_POST['precio'];
 
-$nombrenuevo = $titulo.'.'.pathinfo($img, PATHINFO_EXTENSION);
+$nombrenuevo = $titulo.'.'.pathinfo($nom, PATHINFO_EXTENSION);
 $nombrenuevo = sanear_string($nombrenuevo);
 
 if(file_exists($ruta.$nombrenuevo)){
     unlink($ruta.$nombrenuevo);
 }
     try{
-        $query="INSERT INTO `cursos`(`id`, `titulo`, `descripcion`, `precio`, `imagen`) VALUES ('',$titulo,$desc,$precio,$nombrenuevo)";
+        $nombrenuevo = $ruta.$nombrenuevo;
+        $query="INSERT INTO `cursos`(`titulo`, `descripcion`, `precio`, `imagen`) VALUES ('$titulo','$desc','$precio','$nombrenuevo')";
         $result = $conexion->query($query);
-        move_uploaded_file($temp, $ruta.$nombrenuevo);
+        move_uploaded_file($temp,$nombrenuevo);
         echo 'Curso subido con exito';
     } catch (Exception $e){
         echo  json_encode($e->getMessage());

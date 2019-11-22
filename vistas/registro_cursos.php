@@ -1,4 +1,4 @@
-<form action="registrocursos.php" method="post">
+<form action="registrocursos.php" method="post" enctype="multipart/form-data">
     <label for="titulo">Titulo</label>
         <input type="text" name="titulo" id="titulo">
     <label for="descripcion">Descripcion</label>
@@ -6,6 +6,6 @@
     <label for="precio">Precio</label>
         <input type="number" name="precio" id="precio">
     <label for="imagen">Imagen</label>
-        <input type="file" name="imagen" id="imagen">
+        <input type="file" name="imagen" id="imagen" >
     <button type="submit">Registrar Curso</button>
 </form>
