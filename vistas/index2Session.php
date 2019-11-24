@@ -34,9 +34,11 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="index2.html">Inicio <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="registro_cursos.php">Registro Cursos </a>
-                </li>
+                <?php if($_SESSION['tipo']== '1'){?>
+                  <li class="nav-item">
+                    <a class="nav-link" href="registro_cursos.php">Registro Cursos </a>
+                  </li>
+                <?php } ?>
                 <li class="nav-item">
                   <a class="nav-link"> <?php echo  "Bienvenido: " . $_SESSION['username'] ?> </a>
                 </li>
@@ -56,8 +58,9 @@
             </center>
           </div>
         <?php
-              $sql = "SELECT `titulo`, `descripcion`, `precio`, `imagen` FROM `cursos`";
+              $sql = "SELECT * FROM `cursos` ";
               $result = $conexion->query($sql);
+              $id;
               while($cards = mysqli_fetch_assoc($result)){
             ?>
           <div class="col-3">
@@ -67,6 +70,9 @@
                 <h5 class="card-title"><?php echo $cards['titulo'] ?></h5>
                 <p class="card-text">Descripción: <?php echo $cards['descripcion'] ?></p>
                 <p class="card-text">Precio: <?php echo $cards['precio'] ?></p>
+                <?php if($_SESSION['tipo']=='2'){ ?>
+                  <a href="curso.php/?id=<?php echo $cards['id'] ?>" class="btn btn-primary">Detalles</a>
+                <?php } ?>
               </div>
             </div>
             </div>

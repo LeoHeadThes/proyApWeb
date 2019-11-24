@@ -38,22 +38,28 @@
 				<h3>Sign Up</h3>
 			</div>
 			<div class="card-body">
-				<form action="registrar.php" method="POST">
 
+				<form action="registrar.php" method="POST">
+					<div class="input-group form-group">
+						<div class="input-group">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<select name="tipo" class="form-control" placeholder="¿Que tipo de ususario eres?">
+							<option value="1">Profesor</option>
+							<option value="2">Alumno</option>
+						</select>
+					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
 						<input type="email" name="email" class="form-control" placeholder="Introduce tu e-mail">
-
 					</div>
-
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
 						<input type="text" name="username" class="form-control" placeholder="Introduce tu nombre de usuario">
-
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">

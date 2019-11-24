@@ -55,7 +55,7 @@
             </center>
           </div>
         <?php
-              $sql = "SELECT `titulo`, `descripcion`, `precio`, `imagen` FROM `cursos`";
+              $sql = "SELECT * FROM `cursos`";
               $result = $conexion->query($sql);
               while($cards = mysqli_fetch_assoc($result)){
             ?>
@@ -66,6 +66,9 @@
                 <h5 class="card-title"><?php echo $cards['titulo'] ?></h5>
                 <p class="card-text">Descripción: <?php echo $cards['descripcion'] ?></p>
                 <p class="card-text">Precio: <?php echo $cards['precio'] ?></p>
+                <?php if($_SESSION['tipo']=='1'){ ?>
+                  <a href="curso.php/?id=<?php echo $cards['id'] ?>" class="btn btn-primary">Detalles</a>
+                <?php } ?>
               </div>
             </div>
             </div>

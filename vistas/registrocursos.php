@@ -65,7 +65,8 @@ if(file_exists($ruta.$nombrenuevo)){
         $query="INSERT INTO `cursos`(`titulo`, `descripcion`, `precio`, `imagen`) VALUES ('$titulo','$desc','$precio','$nombrenuevo')";
         $result = $conexion->query($query);
         move_uploaded_file($temp,$nombrenuevo);
-        echo 'Curso subido con exito';
+        echo '<script> alert("Curso subido con exito")</script>';
+        header('location: index2.php');
     } catch (Exception $e){
         echo  json_encode($e->getMessage());
         }
