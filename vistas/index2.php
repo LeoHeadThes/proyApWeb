@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index2.html">Inicio <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index2.php">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li>
                   <a class="nav-link" href="login.php">Inicia sesión </a>
@@ -64,10 +64,10 @@
               <img src="<?php echo $cards['imagen'] ?>" class="card-img-top" style="width:100%; height:250px;" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $cards['titulo'] ?></h5>
-                <p class="card-text">Descripción: <?php echo $cards['descripcion'] ?></p>
-                <p class="card-text">Precio: <?php echo $cards['precio'] ?></p>
+                <p class="card-text"><b>Descripción:</b> <?php echo $cards['descripcion'] ?></p>
+                <p class="card-text"><b>Precio: $</b><?php echo $cards['precio'] ?></p>
                 <?php if($_SESSION['tipo']=='1'){ ?>
-                  <a href="curso.php/?id=<?php echo $cards['id'] ?>" class="btn btn-primary">Detalles</a>
+                  <a href="curso.php" class="btn btn-primary">Detalles</a>
                 <?php } ?>
               </div>
             </div>
